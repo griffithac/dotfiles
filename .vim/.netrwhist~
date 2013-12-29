@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/andrewg/Dropbox/Development/griffithind_co'
+let g:netrw_dirhist_2='/Users/andrewg/Dropbox/Development/griffithind_co/app'
+let g:netrw_dirhist_3='/Users/andrewg/Dropbox/Development/griffithind_co/app/models'
+let g:netrw_dirhist_4='/Users/andrewg/Dropbox/Development/griffithind_co'
+let g:netrw_dirhist_5='/Users/andrewg/Dropbox/Development/griffithind_co/app'
+let g:netrw_dirhist_6='/Users/andrewg/Dropbox/Development/griffithind_co/app/models'
