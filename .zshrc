@@ -9,8 +9,11 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="griffith"
 
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
+alias zshrc="vim ~/.zshrc && reload"
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
+alias githash "git log --pretty=format:'%h' -n 1"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -35,7 +38,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/Users/andrewg/.rvm/gems/ruby-1.9.2-p290/bin:/Users/andrewg/.rvm/gems/ruby-1.9.2-p290@global/bin:/Users/andrewg/.rvm/rubies/ruby-1.9.2-p290/bin:/Users/andrewg/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
+export PATH=/Users/andrewg/.rvm/gems/ruby-1.9.2-p290/bin:/Users/andrewg/.rvm/gems/ruby-1.9.2-p290@global/bin:/Users/andrewg/.rvm/rubies/ruby-1.9.2-p290/bin:/Users/andrewg/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 [[ -s "/Users/andrewg/.rvm/scripts/rvm" ]] && source "/Users/andrewg/.rvm/scripts/rvm"
 
 __rvm_project_rvmrc
