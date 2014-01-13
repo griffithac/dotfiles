@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/andrewg/code/dotfiles/.vim/bundle'
+let g:netrw_dirhist_2='/Users/andrewg/code/dotfiles/.vim/bundle/FuzzyFinder'
+let g:netrw_dirhist_3='/Users/andrewg/code/dotfiles/.vim/bundle/FuzzyFinder/plugin'
