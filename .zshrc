@@ -13,7 +13,8 @@ alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 alias zshrc="vim ~/.zshrc && reload"
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
-alias githash "git log --pretty=format:'%h' -n 1"
+alias githash="git log --pretty=format:'%h' -n 1"
+alias r="rake"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
