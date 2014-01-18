@@ -5,7 +5,8 @@ set t_Co=256
 "set t_Co=88
 let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 
-colorscheme railscasts
+color greenvision
+" color redblack
 
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
@@ -40,7 +41,10 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-scripts/L9'
 Bundle 'vim-scripts/FuzzyFinder'
 Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'flazz/vim-colorschemes'
 Bundle 'EasyGrep'
+Bundle 'xolox/vim-misc.git'
+Bundle 'xolox/vim-colorscheme-switcher'
  
 nmap + :vertical res +5^M<CR>
 nmap _ :vertical res -5^M<CR>
