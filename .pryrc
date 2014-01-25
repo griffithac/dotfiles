@@ -1,4 +1,7 @@
 require "rubygems"
+require "awesome_print"
+
+AwesomePrint.pry!
 
 def y(obj)
   puts obj.to_yaml

@@ -15,6 +15,7 @@ alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias githash="git log --pretty=format:'%h' -n 1"
 alias r="rake"
+alias v='vim'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
