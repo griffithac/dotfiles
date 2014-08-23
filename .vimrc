@@ -1,5 +1,6 @@
 set nocompatible " be iMproved
 filetype off     " required!
+filetype plugin on
 
 set t_Co=256
 "set t_Co=88
@@ -8,6 +9,7 @@ let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 " color greenvision
 " color redblack
 " color blacklight
+color railscasts256
 
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
@@ -25,6 +27,9 @@ set hlsearch
 call vundle#rc()
 let mapleader = ','
 
+" manually set coffeescript syntax on file open
+au BufRead,BufNewFile *.coffee set syn=coffee
+
 " required! 
 Bundle 'gmarik/vundle'
 
@@ -32,8 +37,8 @@ Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'ivalkeen/vim-simpledb'
-Bundle 'scrooloose/nerdtree'
-Bundle 'kchmck/vim-coffee-script'
+Bundle "garbas/vim-snipmate"
+Bundle "honza/vim-snippets"
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-ruby'
@@ -53,9 +58,12 @@ Bundle 'rgarver/Kwbd.vim'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
-Bundle "honza/vim-snippets"
 Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'mileszs/ack.vim'
+Bundle 'tomtom/tcomment_vim'
+" Bundle 'ervandew/supertab'
+Bundle 'moll/vim-bbye'
+Bundle 'kchmck/vim-coffee-script'
 
 " tmux navication key bindigns using ctrl
 let g:tmux_navigator_no_mappings = 1
@@ -71,6 +79,20 @@ nmap _ :vertical res -5^M<CR>
 
 " cycle windows with leader m
 map <leader>m <C-w>w
+
+
+vmap <leader>' <S-s>' 
+vmap <leader>" <S-s>" 
+vmap <leader>{ <S-s>{ 
+
+
+" explore with leader e
+map <leader>e :Explore<CR>
+map <leader>v :Vexplore<CR>
+map <leader>s :Sexplore<CR>
+
+" shortcut for Bdelete
+nnoremap <Leader>q :Bdelete<CR>
 
 " nmap <S-TAB> :tabn<CR>
 
@@ -93,6 +115,12 @@ nmap :vimrc :edit ~/.vimrc<CR>
 map <leader>t :CtrlP<CR>
 map <C-t> :CtrlP<CR>
 
+" execute ruby code in current buffer
+nmap <leader>r :!ruby %<CR>
+
+" map shortcut to buffer delete
+nmap <leader>d :Bd<CR>
+
 " map simicolon to colon to save shifting
 nmap ; :
 
@@ -104,7 +132,7 @@ if has("autocmd")
 endif
 
 " open vimrc on the fly
-nmap <leader>v :tabedit $MYVIMRC<CR>
+nmap <leader>\ :tabedit $MYVIMRC<CR>
 
 nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
 autocmd BufWritePre *.py,*.js,*.coffee,*.rb,*.rake :call <SID>StripTrailingWhitespaces()
