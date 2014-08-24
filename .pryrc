@@ -1,5 +1,6 @@
-require "rubygems"
-require "awesome_print"
+require 'rubygems'
+require 'awesome_print'
+require 'table_print'
 
 AwesomePrint.pry!
 
