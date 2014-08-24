@@ -1,6 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/andrewg/code/wslservices_net/lib/tasks'
-let g:netrw_dirhist_2='/Users/andrewg/code/griffithind_co/db/migrate'
-let g:netrw_dirhist_3='/Users/andrewg/code/dotfiles'
-let g:netrw_dirhist_4='/Users/andrewg/code'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/andrewg/code/griffithind_co/app/value_objects'
+let g:netrw_dirhist_2='/Users/andrewg/code/griffithind_co/app/views/inventory_receipts'
+let g:netrw_dirhist_3='/Users/andrewg/code/griffithind_co/app/models'
+let g:netrw_dirhist_4='/Users/andrewg/code/griffithind_co/app/views/inventory_receipts'
+let g:netrw_dirhist_5='/Users/andrewg/code/griffithind_co/app/models'
+let g:netrw_dirhist_6='/Users/andrewg/code'
