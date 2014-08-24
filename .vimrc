@@ -27,6 +27,9 @@ set hlsearch
 call vundle#rc()
 let mapleader = ','
 
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
 " manually set coffeescript syntax on file open
 au BufRead,BufNewFile *.coffee set syn=coffee
 
