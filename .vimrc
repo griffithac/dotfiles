@@ -50,8 +50,8 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-unimpaired'
-"Bundle 'vim-scripts/L9'
-"Bundle 'vim-scripts/FuzzyFinder'
+Bundle 'vim-scripts/L9'
+Bundle 'vim-scripts/FuzzyFinder'
 Bundle 'kien/ctrlp.vim'
 Bundle 'flazz/vim-colorschemes'
 "Bundle 'EasyGrep'
@@ -67,6 +67,7 @@ Bundle 'tomtom/tcomment_vim'
 " Bundle 'ervandew/supertab'
 Bundle 'moll/vim-bbye'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'ngmy/vim-rubocop'
 
 " tmux navication key bindigns using ctrl
 let g:tmux_navigator_no_mappings = 1
@@ -99,9 +100,8 @@ nnoremap <Leader>q :Bdelete<CR>
 
 " nmap <S-TAB> :tabn<CR>
 
-" use up and down nav to exit insert mode
-imap jj <ESC>j
-imap kk <ESC>k
+" map www to write 
+map www <ESC>:w<CR>
 
 " This makes it so that all indentation commands are the same in all modes.
 " Causes a problem with ranges in ruby.  You would have to slow type ..

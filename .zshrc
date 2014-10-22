@@ -46,3 +46,7 @@ __rvm_project_rvmrc
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 PATH=$PATH:~/bin/subl
+
+PATH=$PATH:~/dotfiles/scripts
+
+set $EDITOR=vim
