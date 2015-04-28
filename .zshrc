@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="gnzh"
+ZSH_THEME="crunch"
 
 # Example aliases
 alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
@@ -39,7 +39,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/Users/andrewg/.rvm/gems/ruby-1.9.2-p290/bin:/Users/andrewg/.rvm/gems/ruby-1.9.2-p290@global/bin:/Users/andrewg/.rvm/rubies/ruby-1.9.2-p290/bin:/Users/andrewg/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+# export PATH=/Users/andrewg/.rvm/gems/ruby-1.9.2-p290/bin:/Users/andrewg/.rvm/gems/ruby-1.9.2-p290@global/bin:/Users/andrewg/.rvm/rubies/ruby-1.9.2-p290/bin:/Users/andrewg/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 [[ -s "/Users/andrewg/.rvm/scripts/rvm" ]] && source "/Users/andrewg/.rvm/scripts/rvm"
 
 __rvm_project_rvmrc
@@ -50,3 +50,6 @@ PATH=$PATH:~/bin/subl
 PATH=$PATH:~/dotfiles/scripts
 
 set $EDITOR=vim
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

@@ -1,18 +1,28 @@
+execute pathogen#infect()
 set nocompatible " be iMproved
 filetype off     " required!
 filetype plugin on
 
 set t_Co=256
 "set t_Co=88
+execute "set colorcolumn=" . join(range(81,335), ',')
+
 let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 
 " color greenvision
 " color redblack
 " color blacklight
-color railscasts256
+" color railscasts256
+" color Monokai
+color Tomorrow-Night
 
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
+
+let g:multi_cursor_start_key='g<C-n>'
+let g:multi_cursor_start_word_key='<C-n>'
+
+let g:move_key_modifier = 'C'
 
 set backspace=indent,eol,start
 set rtp+=~/.vim/bundle/vundle/
@@ -27,47 +37,19 @@ set hlsearch
 call vundle#rc()
 let mapleader = ','
 
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/ 
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " manually set coffeescript syntax on file open
 au BufRead,BufNewFile *.coffee set syn=coffee
 
-" required! 
-Bundle 'gmarik/vundle'
-
-" original repos on GitHub
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'ivalkeen/vim-simpledb'
-Bundle "garbas/vim-snipmate"
-Bundle "honza/vim-snippets"
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rake'
-Bundle 'tpope/vim-ruby'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-git'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'vim-scripts/L9'
-Bundle 'vim-scripts/FuzzyFinder'
-Bundle 'kien/ctrlp.vim'
-Bundle 'flazz/vim-colorschemes'
-"Bundle 'EasyGrep'
-Bundle 'xolox/vim-misc.git'
-Bundle 'xolox/vim-colorscheme-switcher'
-Bundle 'rgarver/Kwbd.vim'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'mileszs/ack.vim'
-Bundle 'tomtom/tcomment_vim'
-" Bundle 'ervandew/supertab'
-Bundle 'moll/vim-bbye'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'ngmy/vim-rubocop'
+" manually set slim syntax on file open
+au BufRead,BufNewFile *.slim set syn=slim
+au BufRead,BufNewFile *.pde set filetype=arduino
+au BufRead,BufNewFile *.ino set filetype=arduino
 
 " tmux navication key bindigns using ctrl
 let g:tmux_navigator_no_mappings = 1
@@ -84,11 +66,9 @@ nmap _ :vertical res -5^M<CR>
 " cycle windows with leader m
 map <leader>m <C-w>w
 
-
 vmap <leader>' <S-s>' 
 vmap <leader>" <S-s>" 
 vmap <leader>{ <S-s>{ 
-
 
 " explore with leader e
 map <leader>e :Explore<CR>
@@ -139,6 +119,7 @@ nmap <leader>\ :tabedit $MYVIMRC<CR>
 
 nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
 autocmd BufWritePre *.py,*.js,*.coffee,*.rb,*.rake :call <SID>StripTrailingWhitespaces()
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 function! <SID>StripTrailingWhitespaces()
   let _s=@/

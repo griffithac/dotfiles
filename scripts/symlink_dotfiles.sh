@@ -5,6 +5,7 @@ ln -s dotfiles/.oh-my-zsh
 ln -s dotfiles/.tmux.conf
 ln -s dotfiles/.vimrc
 ln -s dotfiles/.vim
+ln -s dotfiles/.xvimrc
 ln -s dotfiles/.vmailrc
 ln -s dotfiles/.pryrc
 ln -s dotfiles/.gitignore_global

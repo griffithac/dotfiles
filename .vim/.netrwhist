@@ -1,5 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/andrewg/code/griffithind_co/db/migrate'
-let g:netrw_dirhist_2='/Users/andrewg/.bundle'
-let g:netrw_dirhist_3='/Users/andrewg/code/dotfiles/scripts'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/andrewg/code/griffithind_co/app/views/items'
