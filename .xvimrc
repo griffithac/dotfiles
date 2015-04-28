@@ -1,0 +1,57 @@
+let mapleader = ','
+
+" resize window
+nmap + :vertical res +5^M<CR>
+nmap _ :vertical res -5^M<CR>
+
+" cycle windows with leader m
+map <leader>m <C-w>w
+
+vmap <leader>' <S-s>' 
+vmap <leader>" <S-s>" 
+vmap <leader>{ <S-s>{ 
+
+" explore with leader e
+map <leader>e :Explore<CR>
+map <leader>v :Vexplore<CR>
+map <leader>s :Sexplore<CR>
+
+" shortcut for Bdelete
+nnoremap <Leader>q :Bdelete<CR>
+
+" nmap <S-TAB> :tabn<CR>
+
+" map www to write 
+map www <ESC>:w<CR>
+
+" This makes it so that all indentation commands are the same in all modes.
+" Causes a problem with ranges in ruby.  You would have to slow type ..
+imap >> <ESC>>>i
+imap << <ESC><<i
+imap << <ESC>v<i
+imap << <ESC>v<i
+nmap << <<
+nmap >> >>
+vmap << <gv
+vmap >> >gv
+nmap :vimrc :edit ~/.vimrc<CR>
+
+map <leader>t :CtrlP<CR>
+map <C-t> :CtrlP<CR>
+
+" execute ruby code in current buffer
+nmap <leader>r :!ruby %<CR>
+
+" map shortcut to buffer delete
+nmap <leader>d :Bd<CR>
+
+" map simicolon to colon to save shifting
+nmap ; :
+
+nmap :b<CR> :buffers<CR>
+nmap <leader>g :silent !touch %<CR>
+
+" open vimrc on the fly
+nmap <leader>\ :tabedit $MYVIMRC<CR>
+
+nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
