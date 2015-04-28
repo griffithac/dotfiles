@@ -34,14 +34,10 @@ set ts=2 sts=2 sw=2 expandtab
 set hlsearch
 set hlsearch
 " set foldmethod=syntax
-call vundle#rc()
 let mapleader = ','
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/ 
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
 
 " manually set coffeescript syntax on file open
 au BufRead,BufNewFile *.coffee set syn=coffee
