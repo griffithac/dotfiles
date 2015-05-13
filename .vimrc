@@ -47,13 +47,13 @@ au BufRead,BufNewFile *.slim set syn=slim
 au BufRead,BufNewFile *.pde set filetype=arduino
 au BufRead,BufNewFile *.ino set filetype=arduino
 
-" tmux navication key bindigns using ctrl
 let g:tmux_navigator_no_mappings = 1
-nnoremap <silent> {Left-mapping} :TmuxNavigateLeft<cr>
-nnoremap <silent> {Down-Mapping} :TmuxNavigateDown<cr>
-nnoremap <silent> {Up-Mapping} :TmuxNavigateUp<cr>
-nnoremap <silent> {Right-Mapping} :TmuxNavigateRight<cr>
-nnoremap <silent> {Previoust-Mapping} :TmuxNavigatePrevious<cr>
+
+nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <C-\> :TmuxNavigatePrevious<cr>
 
 " resize window
 nmap + :vertical res +5^M<CR>
@@ -114,6 +114,9 @@ endif
 nmap <leader>\ :tabedit $MYVIMRC<CR>
 
 nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
+
+silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
+
 autocmd BufWritePre *.py,*.js,*.coffee,*.rb,*.rake :call <SID>StripTrailingWhitespaces()
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
