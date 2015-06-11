@@ -79,7 +79,7 @@ map <leader>s :Sexplore<CR>
 
 
 " shortcut for Bdelete
-nnoremap <Leader>q :Bdelete<CR>
+nnoremap <Leader>d :bd<CR>
 
 " shortcut for EasyMotion
 nnoremap <Leader>f <Leader><Leader>w
@@ -106,9 +106,6 @@ map <C-t> :CtrlP<CR>
 
 " execute ruby code in current buffer
 nmap <leader>r :!ruby %<CR>
-
-" map shortcut to buffer delete
-nmap <leader>d :Bd<CR>
 
 " map simicolon to colon to save shifting
 nmap ; :
