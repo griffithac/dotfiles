@@ -81,6 +81,9 @@ map <leader>s :Sexplore<CR>
 " shortcut for Bdelete
 nnoremap <Leader>q :Bdelete<CR>
 
+" shortcut for EasyMotion
+nnoremap <Leader>f <Leader><Leader>w
+
 " nmap <S-TAB> :tabn<CR>
 
 " map www to write 
