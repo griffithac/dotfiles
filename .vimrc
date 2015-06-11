@@ -71,6 +71,13 @@ map <leader>e :Explore<CR>
 map <leader>v :Vexplore<CR>
 map <leader>s :Sexplore<CR>
 
+" " fast motion
+" nnoremap <C-h> 4h
+" nnoremap <C-j> 4j
+" nnoremap <C-k> 4k 
+" nnoremap <C-l> 4l
+
+
 " shortcut for Bdelete
 nnoremap <Leader>q :Bdelete<CR>
 
