@@ -1,5 +1,22 @@
-mkdir ~/.vim/bundle
-cd ~/.vim/bundle
+cd
+ln -sv dotfiles/.ackrc
+ln -sv dotfiles/.gitignore_global
+ln -sv dotfiles/.oh-my-zsh
+ln -sv dotfiles/.pryrc
+ln -sv dotfiles/.tmux.conf
+ln -sv dotfiles/.vimrc
+ln -sv dotfiles/.vmailrc
+ln -sv dotfiles/.xvimrc
+ln -sv dotfiles/.zshrc
+ln -sv dotfiles/.zshrc-update
+
+rm -fR ~/.vim
+mkdir -p ~/.vim
+mkdir -p ~/.vim/autoload
+mkdir -p ~/.vim/bundle 
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+cd .vim/bundle
 git clone https://github.com/vim-scripts/FuzzyFinder.git
 git clone https://github.com/rgarver/Kwbd.vim.git
 git clone https://github.com/vim-scripts/L9.git
@@ -42,3 +59,5 @@ git clone https://github.com/tpope/vim-unimpaired.git
 git clone https://github.com/Shougo/vimproc.vim.git
 git clone https://github.com/Shougo/vimproc.vim.git
 git clone https://github.com/christoomey/vim-tmux-navigator.git
+
+echo 'Install Complete'
