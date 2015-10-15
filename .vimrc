@@ -1,20 +1,22 @@
 execute pathogen#infect()
 set nocompatible " be iMproved
+set ic
 filetype off     " required!
 filetype plugin on
 
 set t_Co=256
 "set t_Co=88
-execute "set colorcolumn=" . join(range(81,335), ',')
+execute "set colorcolumn=" . join(range(81,81), ',')
 
 let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 
 " color greenvision
 " color redblack
-" color blacklight
+color blacklight
 " color railscasts256
 " color Monokai
-color Tomorrow-Night
+" color Tomorrow-Night
+" color adam
 
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
@@ -23,6 +25,10 @@ let g:multi_cursor_start_key='g<C-n>'
 let g:multi_cursor_start_word_key='<C-n>'
 
 let g:move_key_modifier = 'C'
+
+let g:vimrubocop_config = '~/dotfiles/rubocop.yml'
+let g:vimrubocop_keymap = 0
+nmap <Leader>c :RuboCop<CR>
 
 set backspace=indent,eol,start
 set rtp+=~/.vim/bundle/vundle/
@@ -49,11 +55,11 @@ au BufRead,BufNewFile *.ino set filetype=arduino
 
 let g:tmux_navigator_no_mappings = 1
 
-nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
-nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
-nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
-nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
-nnoremap <silent> <C-\> :TmuxNavigatePrevious<cr>
+nnoremap <silent> {Left-mapping} :TmuxNavigateLeft<cr>
+nnoremap <silent> {Down-Mapping} :TmuxNavigateDown<cr>
+nnoremap <silent> {Up-Mapping} :TmuxNavigateUp<cr>
+nnoremap <silent> {Right-Mapping} :TmuxNavigateRight<cr>
+nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
 
 " resize window
 nmap + :vertical res +5^M<CR>
@@ -71,18 +77,8 @@ map <leader>e :Explore<CR>
 map <leader>v :Vexplore<CR>
 map <leader>s :Sexplore<CR>
 
-" " fast motion
-" nnoremap <C-h> 4h
-" nnoremap <C-j> 4j
-" nnoremap <C-k> 4k 
-" nnoremap <C-l> 4l
-
-
 " shortcut for Bdelete
-nnoremap <Leader>d :bd<CR>
-
-" shortcut for EasyMotion
-nnoremap <Leader>f <Leader><Leader>w
+nnoremap <Leader>q :Bdelete<CR>
 
 " nmap <S-TAB> :tabn<CR>
 
@@ -107,6 +103,9 @@ map <C-t> :CtrlP<CR>
 " execute ruby code in current buffer
 nmap <leader>r :!ruby %<CR>
 
+" map shortcut to buffer delete
+nmap <leader>d :Bd<CR>
+
 " map simicolon to colon to save shifting
 nmap ; :
 
@@ -121,9 +120,6 @@ endif
 nmap <leader>\ :tabedit $MYVIMRC<CR>
 
 nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
-
-silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
-
 autocmd BufWritePre *.py,*.js,*.coffee,*.rb,*.rake :call <SID>StripTrailingWhitespaces()
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
