@@ -1,6 +1,6 @@
 execute pathogen#infect()
 set nocompatible " be iMproved
-set ic
+set noic
 filetype off     " required!
 filetype plugin on
 
@@ -12,10 +12,11 @@ let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 
 " color greenvision
 " color redblack
-color blacklight
+" color blacklight
 " color railscasts256
+" color sexy-railscasts
 " color Monokai
-" color Tomorrow-Night
+color Tomorrow-Night
 " color adam
 
 let g:rubycomplete_buffer_loading = 1
@@ -131,6 +132,20 @@ function! <SID>StripTrailingWhitespaces()
   let @/=_s
   call cursor(l, c)
 endfunction
+
+" CtrlP auto cache clearing.
+function! SetupCtrlP()
+  if exists("g:loaded_ctrlp") && g:loaded_ctrlp
+    augroup CtrlPExtension
+      autocmd!
+      autocmd FocusGained  * CtrlPClearCache
+      autocmd BufWritePost * CtrlPClearCache
+    augroup END
+  endif
+endfunction
+if has("autocmd")
+  autocmd VimEnter * :call SetupCtrlP()
+endif
 
 syntax enable
 filetype plugin indent on

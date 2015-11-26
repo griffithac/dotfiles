@@ -53,3 +53,8 @@ set $EDITOR=vim
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# Add golang
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/code
+export PATH=$PATH:$GOPATH/bin

@@ -59,5 +59,7 @@ git clone https://github.com/tpope/vim-unimpaired.git
 git clone https://github.com/Shougo/vimproc.vim.git
 git clone https://github.com/Shougo/vimproc.vim.git
 git clone https://github.com/christoomey/vim-tmux-navigator.git
+git clone https://github.com/fatih/vim-go.git
+git clone https://github.com/moll/vim-bbye.git
 
 echo 'Install Complete'
