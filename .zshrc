@@ -5,7 +5,8 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="crunch"
+# ZSH_THEME="crunch"
+ZSH_THEME="pure"
 
 # Example aliases
 alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
@@ -13,7 +14,7 @@ alias zshrc="vim ~/.zshrc && reload"
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias githash="git log --pretty=format:'%h' -n 1"
-alias r="rake"
+alias r="bundle exec rake"
 alias v='vim'
 
 # Set to this to use case-sensitive completion
@@ -58,3 +59,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/code
 export PATH=$PATH:$GOPATH/bin
+
+export NVM_DIR="/Users/andrewg/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

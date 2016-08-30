@@ -16,7 +16,8 @@ let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 " color railscasts256
 " color sexy-railscasts
 " color Monokai
-color Tomorrow-Night
+color Tomorrow-Night-Bright
+" color Tomorrow
 " color adam
 
 let g:rubycomplete_buffer_loading = 1
@@ -30,6 +31,9 @@ let g:move_key_modifier = 'C'
 let g:vimrubocop_config = '~/dotfiles/rubocop.yml'
 let g:vimrubocop_keymap = 0
 nmap <Leader>c :RuboCop<CR>
+
+" Add syntax rule
+let g:ruby_heredoc_syntax_filetypes = { "sh" : { "start" : "SH" } }
 
 set backspace=indent,eol,start
 set rtp+=~/.vim/bundle/vundle/
@@ -123,6 +127,8 @@ nmap <leader>\ :tabedit $MYVIMRC<CR>
 nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
 autocmd BufWritePre *.py,*.js,*.coffee,*.rb,*.rake :call <SID>StripTrailingWhitespaces()
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+autocmd BufNewFile,BufRead *.crb set syntax=rb
+
 
 function! <SID>StripTrailingWhitespaces()
   let _s=@/

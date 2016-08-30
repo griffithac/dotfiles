@@ -1,14 +1,16 @@
+#!/bin/sh
+
 cd
-ln -sv dotfiles/.ackrc
-ln -sv dotfiles/.gitignore_global
-ln -sv dotfiles/.oh-my-zsh
-ln -sv dotfiles/.pryrc
-ln -sv dotfiles/.tmux.conf
-ln -sv dotfiles/.vimrc
-ln -sv dotfiles/.vmailrc
-ln -sv dotfiles/.xvimrc
-ln -sv dotfiles/.zshrc
-ln -sv dotfiles/.zshrc-update
+ln -sv ./dotfiles/.ackrc
+ln -sv ./dotfiles/.gitignore_global
+ln -sv ./dotfiles/.oh-my-zsh
+ln -sv ./dotfiles/.pryrc
+ln -sv ./dotfiles/.tmux.conf
+ln -sv ./dotfiles/.vimrc
+ln -sv ./dotfiles/.vmailrc
+ln -sv ./dotfiles/.xvimrc
+ln -sv ./dotfiles/.zshrc
+ln -sv ./dotfiles/.zshrc-update
 
 rm -fR ~/.vim
 mkdir -p ~/.vim
@@ -61,5 +63,6 @@ git clone https://github.com/Shougo/vimproc.vim.git
 git clone https://github.com/christoomey/vim-tmux-navigator.git
 git clone https://github.com/fatih/vim-go.git
 git clone https://github.com/moll/vim-bbye.git
+git clone https://github.com/joker1007/vim-markdown-quote-syntax
 
 echo 'Install Complete'
