@@ -1,16 +1,16 @@
 #!/bin/sh
 
 cd
-ln -sv ./dotfiles/.ackrc
-ln -sv ./dotfiles/.gitignore_global
-ln -sv ./dotfiles/.oh-my-zsh
-ln -sv ./dotfiles/.pryrc
-ln -sv ./dotfiles/.tmux.conf
-ln -sv ./dotfiles/.vimrc
-ln -sv ./dotfiles/.vmailrc
-ln -sv ./dotfiles/.xvimrc
-ln -sv ./dotfiles/.zshrc
-ln -sv ./dotfiles/.zshrc-update
+ln -sv dotfiles/.ackrc
+ln -sv dotfiles/.gitignore_global
+ln -sv dotfiles/.oh-my-zsh
+ln -sv dotfiles/.pryrc
+ln -sv dotfiles/.tmux.conf
+ln -sv dotfiles/.vimrc
+ln -sv dotfiles/.vmailrc
+ln -sv dotfiles/.xvimrc
+ln -sv dotfiles/.zshrc
+ln -sv dotfiles/.zshrc-update
 
 rm -fR ~/.vim
 mkdir -p ~/.vim
@@ -48,7 +48,7 @@ git clone https://github.com/terryma/vim-multiple-cursors.git
 git clone https://github.com/tpope/vim-rails.git
 git clone https://github.com/tpope/vim-rake.git
 git clone https://github.com/ngmy/vim-rubocop.git
-git clone https://github.com/tpope/vim-ruby.git
+git clone https://$1:$2@github.com/tpope/vim-ruby.git
 git clone https://github.com/tpope/vim-sensible.git
 git clone https://github.com/ivalkeen/vim-simpledb.git
 git clone https://github.com/slim-template/vim-slim.git
@@ -64,5 +64,8 @@ git clone https://github.com/christoomey/vim-tmux-navigator.git
 git clone https://github.com/fatih/vim-go.git
 git clone https://github.com/moll/vim-bbye.git
 git clone https://github.com/joker1007/vim-markdown-quote-syntax
+git clone https://github.com/godlygeek/tabular.git
+git clone https://github.com/dracula/vim.git
+git clone https://github.com/voi/unite-ctags.git
 
 echo 'Install Complete'
