@@ -6,7 +6,8 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="crunch"
-ZSH_THEME="pure"
+# ZSH_THEME="pure"
+ZSH_THEME="dracula"
 
 # Example aliases
 alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
@@ -43,7 +44,6 @@ source $ZSH/oh-my-zsh.sh
 # export PATH=/Users/andrewg/.rvm/gems/ruby-1.9.2-p290/bin:/Users/andrewg/.rvm/gems/ruby-1.9.2-p290@global/bin:/Users/andrewg/.rvm/rubies/ruby-1.9.2-p290/bin:/Users/andrewg/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 [[ -s "/Users/andrewg/.rvm/scripts/rvm" ]] && source "/Users/andrewg/.rvm/scripts/rvm"
 
-__rvm_project_rvmrc
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 PATH=$PATH:~/bin/subl
@@ -62,3 +62,5 @@ export PATH=$PATH:$GOPATH/bin
 
 export NVM_DIR="/Users/andrewg/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

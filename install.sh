@@ -43,6 +43,7 @@ git clone https://github.com/tpope/vim-git.git
 git clone https://github.com/airblade/vim-gitgutter.git
 git clone https://github.com/tpope/vim-markdown.git
 git clone https://github.com/xolox/vim-misc.git
+git clone https://github.com/xolox/vim-notes.git
 git clone https://github.com/matze/vim-move.git
 git clone https://github.com/terryma/vim-multiple-cursors.git
 git clone https://github.com/tpope/vim-rails.git
@@ -65,7 +66,14 @@ git clone https://github.com/fatih/vim-go.git
 git clone https://github.com/moll/vim-bbye.git
 git clone https://github.com/joker1007/vim-markdown-quote-syntax
 git clone https://github.com/godlygeek/tabular.git
+git clone https://github.com/voi/unite-ctags.git
+git clone https://github.com/voi/unite-ctags.git
 git clone https://github.com/dracula/vim.git
 git clone https://github.com/voi/unite-ctags.git
+git clone https://github.com/pangloss/vim-javascript.git
+git clone https://github.com/jelera/vim-javascript-syntax.git
+git clone https://github.com/othree/yajs.git
+git clone https://github.com/greyblake/vim-preview.git
+git clone https://github.com/vim-syntastic/syntastic.git
 
 echo 'Install Complete'

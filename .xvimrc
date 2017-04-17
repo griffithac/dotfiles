@@ -36,8 +36,7 @@ vmap << <gv
 vmap >> >gv
 nmap :vimrc :edit ~/.vimrc<CR>
 
-map <leader>t :CtrlP<CR>
-map <C-t> :CtrlP<CR>
+nmap <leader>t C-O
 
 " execute ruby code in current buffer
 nmap <leader>r :!ruby %<CR>

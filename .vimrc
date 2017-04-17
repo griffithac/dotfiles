@@ -20,6 +20,9 @@ color Tomorrow-Night-Bright
 " color Tomorrow
 " color adam
 
+" Markdown Preview
+let vim_markdown_preview_github=1
+
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
 
@@ -31,6 +34,9 @@ let g:move_key_modifier = 'C'
 let g:vimrubocop_config = '~/dotfiles/rubocop.yml'
 let g:vimrubocop_keymap = 0
 nmap <Leader>c :RuboCop<CR>
+
+" vim-notes
+:let g:notes_directories = ['~/Dropbox/Notes']
 
 " Add syntax rule
 let g:ruby_heredoc_syntax_filetypes = { "sh" : { "start" : "SH" } }
@@ -85,6 +91,8 @@ map <leader>s :Sexplore<CR>
 " shortcut for Bdelete
 nnoremap <Leader>q :Bdelete<CR>
 
+nmap <leader>r :!ruby %<cr>
+
 " nmap <S-TAB> :tabn<CR>
 
 " map www to write 
@@ -111,6 +119,9 @@ nmap <leader>r :!ruby %<CR>
 " map shortcut to buffer delete
 nmap <leader>d :Bd<CR>
 
+" shortcut to Ack
+nmap <Leader>a :Ack 
+
 " map simicolon to colon to save shifting
 nmap ; :
 
@@ -129,6 +140,8 @@ autocmd BufWritePre *.py,*.js,*.coffee,*.rb,*.rake :call <SID>StripTrailingWhite
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd BufNewFile,BufRead *.crb set syntax=rb
 
+" JSX
+let g:jsx_ext_required = 0
 
 function! <SID>StripTrailingWhitespaces()
   let _s=@/
