@@ -4,11 +4,29 @@ set noic
 filetype off     " required!
 filetype plugin on
 
+set nobackup
+set noswapfile
+
 set t_Co=256
 "set t_Co=88
 execute "set colorcolumn=" . join(range(81,81), ',')
 
 let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
+
+" Syntastic Settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Ack Settings
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 " color greenvision
 " color redblack
@@ -138,7 +156,8 @@ nmap <leader>\ :tabedit $MYVIMRC<CR>
 nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
 autocmd BufWritePre *.py,*.js,*.coffee,*.rb,*.rake :call <SID>StripTrailingWhitespaces()
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-autocmd BufNewFile,BufRead *.crb set syntax=rb
+autocmd BufNewFile,BufRead *.crb set syntax=ruby
+autocmd BufNewFile,BufRead *.axlsx set syntax=ruby
 
 " JSX
 let g:jsx_ext_required = 0
