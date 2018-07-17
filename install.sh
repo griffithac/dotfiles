@@ -5,6 +5,7 @@ ln -sv dotfiles/.ackrc
 ln -sv dotfiles/.gitignore_global
 ln -sv dotfiles/.oh-my-zsh
 ln -sv dotfiles/.pryrc
+ln -sv dotfiles/.irbrc
 ln -sv dotfiles/.tmux.conf
 ln -sv dotfiles/.vimrc
 ln -sv dotfiles/.vmailrc
@@ -75,5 +76,6 @@ git clone https://github.com/jelera/vim-javascript-syntax.git
 git clone https://github.com/othree/yajs.git
 git clone https://github.com/greyblake/vim-preview.git
 git clone https://github.com/vim-syntastic/syntastic.git
+git clone https://github.com/othree/eregex.vim 
 
 echo 'Install Complete'

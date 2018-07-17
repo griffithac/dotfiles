@@ -17,6 +17,7 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias githash="git log --pretty=format:'%h' -n 1"
 alias r="bundle exec rake"
 alias v='vim'
+alias bat='pmset -g batt'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"

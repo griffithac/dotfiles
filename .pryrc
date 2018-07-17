@@ -2,6 +2,9 @@ require 'rubygems'
 require 'awesome_print'
 require 'table_print'
 
+IRB.conf[:SAVE_HISTORY] = 200
+IRB.conf[:HISTORY_FILE] = '~/.pry-history'
+
 AwesomePrint.pry!
 
 def y(obj)
