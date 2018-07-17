@@ -68,14 +68,13 @@ git clone https://github.com/moll/vim-bbye.git
 git clone https://github.com/joker1007/vim-markdown-quote-syntax
 git clone https://github.com/godlygeek/tabular.git
 git clone https://github.com/voi/unite-ctags.git
-git clone https://github.com/voi/unite-ctags.git
 git clone https://github.com/dracula/vim.git
-git clone https://github.com/voi/unite-ctags.git
 git clone https://github.com/pangloss/vim-javascript.git
 git clone https://github.com/jelera/vim-javascript-syntax.git
 git clone https://github.com/othree/yajs.git
 git clone https://github.com/greyblake/vim-preview.git
 git clone https://github.com/vim-syntastic/syntastic.git
 git clone https://github.com/othree/eregex.vim 
+git clone https://github.com/craigemery/vim-autotag
 
 echo 'Install Complete'
