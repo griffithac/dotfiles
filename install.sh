@@ -75,6 +75,6 @@ git clone https://github.com/othree/yajs.git
 git clone https://github.com/greyblake/vim-preview.git
 git clone https://github.com/vim-syntastic/syntastic.git
 git clone https://github.com/othree/eregex.vim 
-git clone https://github.com/craigemery/vim-autotag
+# git clone https://github.com/craigemery/vim-autotag
 
 echo 'Install Complete'

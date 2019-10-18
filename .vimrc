@@ -1,3 +1,8 @@
+call plug#begin('~/.vim/plugged')
+  Plug '/usr/local/opt/fzf'
+  Plug 'junegunn/fzf.vim'
+call plug#end()
+
 execute pathogen#infect()
 set nocompatible " be iMproved
 set noic
@@ -128,8 +133,8 @@ vmap << <gv
 vmap >> >gv
 nmap :vimrc :edit ~/.vimrc<CR>
 
-map <leader>t :CtrlP<CR>
-map <C-t> :CtrlP<CR>
+map <leader>t :Files<CR>
+map <C-t> :Files<CR>
 
 " execute ruby code in current buffer
 nmap <leader>r :!ruby %<CR>
