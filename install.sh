@@ -12,11 +12,12 @@ ln -sv dotfiles/.vmailrc
 ln -sv dotfiles/.xvimrc
 ln -sv dotfiles/.zshrc
 ln -sv dotfiles/.zshrc-update
+ln -sv dotfiles/.gemrc
 
 rm -fR ~/.vim
 mkdir -p ~/.vim
 mkdir -p ~/.vim/autoload
-mkdir -p ~/.vim/bundle 
+mkdir -p ~/.vim/bundle
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 cd .vim/bundle
@@ -30,9 +31,6 @@ git clone https://github.com/tomtom/tcomment_vim.git
 git clone https://github.com/tomtom/tlib_vim.git
 git clone https://github.com/vim-scripts/vim-addon-mw-utils.git
 git clone https://github.com/bling/vim-airline.git
-git clone https://github.com/tclem/vim-arduino.git
-git clone https://github.com/jplaut/vim-arduino-ino.git
-git clone https://github.com/sudar/vim-arduino-syntax.git
 git clone https://github.com/tpope/vim-bundler.git
 git clone https://github.com/kchmck/vim-coffee-script.git
 git clone https://github.com/xolox/vim-colorscheme-switcher.git
@@ -57,24 +55,22 @@ git clone https://github.com/slim-template/vim-slim.git
 git clone https://github.com/garbas/vim-snipmate.git
 git clone https://github.com/honza/vim-snippets.git
 git clone https://github.com/tpope/vim-surround.git
-git clone https://github.com/toyamarinyon/vim-swift.git
 git clone https://github.com/christoomey/vim-tmux-navigator.git
 git clone https://github.com/tpope/vim-unimpaired.git
 git clone https://github.com/Shougo/vimproc.vim.git
-git clone https://github.com/Shougo/vimproc.vim.git
 git clone https://github.com/christoomey/vim-tmux-navigator.git
-git clone https://github.com/fatih/vim-go.git
 git clone https://github.com/moll/vim-bbye.git
 git clone https://github.com/joker1007/vim-markdown-quote-syntax
 git clone https://github.com/godlygeek/tabular.git
 git clone https://github.com/voi/unite-ctags.git
-git clone https://github.com/dracula/vim.git
+git clone https://github.com/szw/vim-tags.git
 git clone https://github.com/pangloss/vim-javascript.git
 git clone https://github.com/jelera/vim-javascript-syntax.git
 git clone https://github.com/othree/yajs.git
 git clone https://github.com/greyblake/vim-preview.git
 git clone https://github.com/vim-syntastic/syntastic.git
-git clone https://github.com/othree/eregex.vim 
+git clone https://github.com/othree/eregex.vim
+git clone https://github.com/junegunn/fzf.vim
 # git clone https://github.com/craigemery/vim-autotag
 
 echo 'Install Complete'

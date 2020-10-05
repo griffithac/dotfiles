@@ -40,12 +40,11 @@ alias bat='pmset -g batt'
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.zshenv
 
 # Customize to your needs...
 # export PATH=/Users/andrewg/.rvm/gems/ruby-1.9.2-p290/bin:/Users/andrewg/.rvm/gems/ruby-1.9.2-p290@global/bin:/Users/andrewg/.rvm/rubies/ruby-1.9.2-p290/bin:/Users/andrewg/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 [[ -s "/Users/andrewg/.rvm/scripts/rvm" ]] && source "/Users/andrewg/.rvm/scripts/rvm"
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 PATH=$PATH:~/bin/subl
 
@@ -67,3 +66,6 @@ export NVM_DIR="/Users/andrewg/.nvm"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
+eval "$(rbenv init - zsh)"

@@ -1,7 +1,8 @@
-call plug#begin('~/.vim/plugged')
-  Plug '/usr/local/opt/fzf'
-  Plug 'junegunn/fzf.vim'
-call plug#end()
+set rtp+=~/.fzf
+" call plug#begin('~/.vim/plugged')
+"   Plug '/usr/local/opt/fzf'
+"   Plug 'junegunn/fzf.vim'
+" call plug#end()
 
 execute pathogen#infect()
 set nocompatible " be iMproved
@@ -40,6 +41,7 @@ endif
 " color sexy-railscasts
 " color Monokai
 color Tomorrow-Night-Bright
+" color Tomorrow-Night-Eighties
 " color Tomorrow
 " color adam
 
@@ -53,10 +55,6 @@ let g:multi_cursor_start_key='g<C-n>'
 let g:multi_cursor_start_word_key='<C-n>'
 
 let g:move_key_modifier = 'C'
-
-let g:vimrubocop_config = '~/dotfiles/rubocop.yml'
-let g:vimrubocop_keymap = 0
-nmap <Leader>c :RuboCop<CR>
 
 " vim-notes
 :let g:notes_directories = ['~/Dropbox/Notes']
@@ -121,23 +119,15 @@ nmap <leader>r :!ruby %<cr>
 " map www to write 
 map www <ESC>:w<CR>
 
-" This makes it so that all indentation commands are the same in all modes.
-" Causes a problem with ranges in ruby.  You would have to slow type ..
-imap >> <ESC>>>i
-imap << <ESC><<i
-imap << <ESC>v<i
-imap << <ESC>v<i
-nmap << <<
-nmap >> >>
-vmap << <gv
-vmap >> >gv
 nmap :vimrc :edit ~/.vimrc<CR>
 
 map <leader>t :Files<CR>
 map <C-t> :Files<CR>
 
-" execute ruby code in current buffer
-nmap <leader>r :!ruby %<CR>
+let g:vimrubocop_config = '~/dotfiles/rubocop.yml'
+let g:vimrubocop_keymap = 0
+nmap <Leader>c :RuboCop<CR>
+
 
 " map shortcut to buffer delete
 nmap <leader>d :Bd<CR>
@@ -145,27 +135,35 @@ nmap <leader>d :Bd<CR>
 " shortcut to Ack
 nmap <Leader>a :Ack 
 
+" open vimrc on the fly
+nmap <leader>\ :tabedit $MYVIMRC<CR>
+
+" format file
+map <leader>f gg=G<C-o><C-o>
+
+nnoremap <leader>j <C-W><C-J>
+nnoremap <leader>k <C-W><C-K>
+nnoremap <leader>l <C-W><C-L>
+nnoremap <leader>h <C-W><C-H>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 " map simicolon to colon to save shifting
 nmap ; :
 
-nmap :b<CR> :buffers<CR>
-nmap <leader>g :silent !touch %<CR>
+nnoremap <Leader>b :ls<CR>:b<Space>
 
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
-
-" open vimrc on the fly
-nmap <leader>\ :tabedit $MYVIMRC<CR>
 
 nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
 autocmd BufWritePre *.py,*.js,*.coffee,*.rb,*.rake :call <SID>StripTrailingWhitespaces()
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd BufNewFile,BufRead *.crb set syntax=ruby
 autocmd BufNewFile,BufRead *.axlsx set syntax=ruby
-
-" JSX
-let g:jsx_ext_required = 0
 
 function! <SID>StripTrailingWhitespaces()
   let _s=@/
