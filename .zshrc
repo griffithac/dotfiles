@@ -69,3 +69,4 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
 eval "$(rbenv init - zsh)"
+export PATH="/usr/local/opt/qt/bin:$PATH"
