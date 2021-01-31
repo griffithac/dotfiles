@@ -379,7 +379,6 @@
   :config
   (define-key projectile-rails-mode-map (kbd "C-c r") #'projectile-rails-command-map)
   (define-key projectile-rails-mode-map (kbd "C-q") #'projectile-rails-goto-file-at-point)
-  (setq projectile-rails-expand-snippet-with-magic-comment t)
   (projectile-rails-global-mode))
 
 ;; Company
@@ -526,7 +525,8 @@
   (evil-leader/set-key "c" 'comment-dwim)
   (evil-leader/set-key "t" 'projectile-find-file)
   (evil-leader/set-key "y" 'vterm-toggle)
-  (evil-leader/set-key "r" 'projectile-rails-command-map))
+  (evil-leader/set-key "r" 'projectile-rails-command-map)
+  (evil-leader/set-key "a" 'counsel-projectile-rg))
 
 (evil/keybinding)
 
